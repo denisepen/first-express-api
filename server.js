@@ -26,7 +26,7 @@ app.get('/', (req, res)=>{
 
 app.post('/', (req, res) => {
   var ingredient = req.body;
-  if (!ingredient || ingredient === ""){
+  if (!ingredient || ingredient.text === ""){
     res.status(500).send({error: "Your ingredient must have text"})
   } else {
     ingredients.push(ingredient);
